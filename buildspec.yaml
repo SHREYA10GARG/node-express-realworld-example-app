@@ -10,10 +10,7 @@ phases:
       - npm i -g @angular/cli
       - npm install
       - npm install dotenv --save
-  build:
-    commands:
-      - ng build
-      - echo $MONGODB_URI
+      - echo $MONGODB_URI  
 artifacts:
   files:
     - '**/*'
