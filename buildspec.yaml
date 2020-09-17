@@ -12,7 +12,7 @@ phases:
       - npm install dotenv --save
   build:
     commands:
-      - ng test
+      - ng build
       - echo $MONGODB_URI
 artifacts:
   files:
