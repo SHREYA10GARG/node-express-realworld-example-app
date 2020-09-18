@@ -5,8 +5,8 @@ files:
     destination: /home/ubuntu/my-app
 hooks:
   ApplicationStop:
-    - location: app-stop.sh
+    - location: stop_server.sh
       timeout: 10
   ApplicationStart:
-    - location: app-start.sh
+    - location: start_server.sh
       timeout: 60

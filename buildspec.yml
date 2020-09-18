@@ -12,8 +12,8 @@ phases:
       - npm install dotenv --save
       - npm install pm2 -g
       - echo $MONGODB_URI 
-      - chmod +x app-start.sh
-      - chmod +x app-stop.sh 
+      - chmod +x start_server.sh
+      - chmod +x stop_server.sh 
 artifacts:
   files:
     - appspec.yml
