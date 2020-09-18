@@ -13,4 +13,5 @@ phases:
       - echo $MONGODB_URI  
 artifacts:
   files:
+    - appspec.yaml
     - '**/*'
