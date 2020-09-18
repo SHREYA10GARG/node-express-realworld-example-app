@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+- source: /
+ destination: /home/ubuntu/my-app
+
+hooks:
+ApplicationStop:
+   - location: app-stop.sh
+     timeout: 10
+
+ApplicationStart:
+   - location: app-start.sh
+     timeout: 60
