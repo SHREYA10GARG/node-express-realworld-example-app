@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 var http = require('http'),
     path = require('path'),
     methods = require('methods'),
@@ -9,7 +9,8 @@ var http = require('http'),
     passport = require('passport'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
-
+const dotenv = require("dotenv")
+dotenv.config()
 var isProduction = process.env.NODE_ENV === 'production';
 
 // Create global app object
