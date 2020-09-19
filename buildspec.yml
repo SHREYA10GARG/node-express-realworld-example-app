@@ -1,5 +1,4 @@
 version: 0.1
-
 phases:
   install:
     commands:
@@ -11,6 +10,7 @@ phases:
       - npm install
       - npm install dotenv --save
       - npm install pm2 -g
+      - sed -i 's/abc/$MONGODB_URI/g' .env
       - echo $MONGODB_URI 
       - chmod +x start_server.sh
       - chmod +x stop_server.sh 
