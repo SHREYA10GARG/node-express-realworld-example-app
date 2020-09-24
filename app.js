@@ -34,6 +34,10 @@ if (!isProduction) {
 
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
+  mongoose.set('debug', true);
+  mongoose.set("debug", (collectionName, method, query, doc) => {
+    console.log(`${collectionName}.${method}`, JSON.stringify(query), doc);
+});
 } else {
   mongoose.connect('mongodb://localhost/conduit');
   mongoose.set('debug', true);
@@ -73,6 +77,7 @@ if (!isProduction) {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
+  console.log(err.stack);
   res.status(err.status || 500);
   res.json({'errors': {
     message: err.message,
