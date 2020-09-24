@@ -13,7 +13,7 @@ phases:
       - sed -i 's@abc@'"$MONGODB_URI"'@' .env
       - echo `$MONGODB_URI` 
       - chmod +x start_server.sh
-      - chmod +x stop_server.sh 
+      - chmod +x stop_server.sh
 artifacts:
   files:
     - appspec.yml
