@@ -12,8 +12,8 @@ phases:
       - npm install pm2 -g
       - sed -i 's@abc@'"$MONGODB_URI"'@' .env
       - echo `$MONGODB_URI` 
-      - chmod +x start_server.sh
-      - chmod +x stop_server.sh 
+      - chmod 777 start_server.sh
+      - chmod 777 stop_server.sh 
 artifacts:
   files:
     - appspec.yml
