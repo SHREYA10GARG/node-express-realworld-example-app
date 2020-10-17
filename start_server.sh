@@ -1,3 +1,3 @@
-_#!/bin/bash_ 
+#!/bin/bash 
 cd /home/ubuntu/my-app/
 sudo pm2 start app.js
